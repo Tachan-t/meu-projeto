@@ -132,6 +132,29 @@ button:hover {
     border: 1px solid #f5c6cb;
 }
 
+/* Estilos para a seção introdutória */
+.intro-section {
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0; /* Linha divisória */
+}
+
+.intro-section p {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 1em;
+}
+
+.intro-section .important-note {
+    background-color: #fce8e8; /* Fundo mais claro para notas importantes */
+    color: #922020; /* Cor de texto mais escura */
+    border: 1px solid #d9534f; /* Borda vermelha */
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 /* Estilos para a seção de infraestrutura (details/summary) */
 details {
     border: 1px solid #eee;

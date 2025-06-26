@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const estruturaPropriaRadio = document.getElementById('estruturaPropria');
     const estruturaParceriaRadio = document.getElementById('estruturaParceria');
     const parceriaFields = document.getElementById('parceriaFields');
-    const linkContratoInput = document.getElementById('Link_Contrato_de_Parceria'); // Note o ID atualizado aqui
+    const linkContratoInput = document.getElementById('Link_Contrato_de_Parceria'); // ID do campo de input do link
 
     function toggleParceriaFields() {
         if (estruturaParceriaRadio.checked) {
