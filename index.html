@@ -3,22 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Contato</title>
+    <title>Formulário de Cadastro de Polo - Biomedicina</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <form id="myForm">
-        <h2>Entre em Contato</h2>
-        <label for="Nome">Nome:</label>
-        <input type="text" id="Nome" name="Nome" required>
+        <h2>Cadastro de Polo para Aulas Práticas de Biomedicina</h2>
 
-        <label for="Email">Email:</label>
-        <input type="email" id="Email" name="Email" required>
+        <fieldset>
+            <legend>Informações de Contato</legend>
 
-        <label for="Mensagem">Mensagem:</label>
-        <textarea id="Mensagem" name="Mensagem" rows="5" required></textarea>
+            <label for="Email">Email (Polo):</label>
+            <input type="email" id="Email" name="Email" required>
 
-        <button type="submit">Enviar</button>
+            <label for="Nome_do_Responsavel_pelo_Polo">Nome do Responsável pelo Polo:</label>
+            <input type="text" id="Nome_do_Responsavel_pelo_Polo" name="Nome do Responsavel pelo Polo" required>
+
+            <label for="Telefone_do_Responsavel_pelo_Polo">Telefone do Responsável pelo Polo (com DDD):</label>
+            <input type="text" id="Telefone_do_Responsavel_pelo_Polo" name="Telefone do Responsavel pelo Polo" placeholder="(XX) XXXXX-XXXX" required>
+
+            <label for="Email_do_Responsavel_pelo_Polo">Email do Responsável pelo Polo:</label>
+            <input type="email" id="Email_do_Responsavel_pelo_Polo" name="Email do Responsavel pelo Polo" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dados do Polo</legend>
+
+            <label for="Nome_e_Numero_do_Polo">Você é responsável por qual polo? (Ex: AM - Novo Aripoanã (388))</label>
+            <input type="text" id="Nome_e_Numero_do_Polo" name="Nome e Numero do Polo" required>
+
+            <label for="CNPJ_do_Polo">Qual o CNPJ do polo?</label>
+            <input type="text" id="CNPJ_do_Polo" name="CNPJ do Polo" required>
+
+            <label for="Endereco_do_Polo">Qual o endereço completo do polo? (Importante para entrega de materiais)</label>
+            <textarea id="Endereco_do_Polo" name="Endereco do Polo" rows="3" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estrutura para Aulas</legend>
+
+            <p>Você utilizará estrutura própria para realização das aulas ou fará aula em parceria com estabelecimentos de saúde?</p>
+            <div class="radio-group">
+                <input type="radio" id="estruturaPropria" name="Estrutura ou Parceria" value="Estrutura Propria" required>
+                <label for="estruturaPropria">Vou utilizar estrutura própria</label><br>
+
+                <input type="radio" id="estruturaParceria" name="Estrutura ou Parceria" value="Parceria com Estabelecimento de Saude">
+                <label for="estruturaParceria">Farei aula em parceria com estabelecimentos de saúde</label>
+            </div>
+
+            <div id="parceriaFields" style="display: none; margin-top: 20px;">
+                <label for="Link_Contrato_de_Parceria">Se você assinalou "parceria", por favor, adicione o LINK do contrato de parceria (ex: link do Google Drive/Dropbox):</label>
+                <input type="url" id="Link_Contrato_de_Parceria" name="Link Contrato de Parceria" placeholder="https://exemplo.com/contrato.pdf">
+            </div>
+
+            <label for="Link_Foto_Video_Laboratorio_1">Adicione o LINK da Foto/Vídeo do laboratório (URL 1):</label>
+            <input type="url" id="Link_Foto_Video_Laboratorio_1" name="Link Foto Video Laboratorio 1" placeholder="https://exemplo.com/foto1.jpg" required>
+
+            <label for="Link_Foto_Video_Laboratorio_2">Adicione o LINK da Foto/Vídeo do laboratório (URL 2):</label>
+            <input type="url" id="Link_Foto_Video_Laboratorio_2" name="Link Foto Video Laboratorio 2" placeholder="https://exemplo.com/foto2.jpg">
+        </fieldset>
+
+        <fieldset>
+            <legend>Infraestrutura Mínima para Aulas Práticas de Biomedicina</legend>
+            <p>Ao preencher esse formulário, o polo está ciente de que a infraestrutura mínima para a realização das aulas práticas do curso de biomedicina compreende:</p>
+
+            <details>
+                <summary>Visualizar Lista Completa de Requisitos</summary>
+                <ol>
+                    <li>Sala de aula capaz de receber confortavelmente 20 alunos. - 50m2</li>
+                    <li>Bancada de Pedra ou inox para manipulação dos experimentos e reagentes. Essa bancada deve ter no mínimo 3,00 x 1,00m. Polos que possuem bancadas de madeira ou de outros materiais não serão aceitos.</li>
+                    <li>20 bancos (esses bancos não podem ser de tecido e nem cadeiras)</li>
+                    <li>5 unidades de Dispenser de álcool 70%</li>
+                    <li>1 unidade de Espelho de bancada ou de parede</li>
+                    <li>20 unidades de espátula</li>
+                    <li>5 unidades de Lixeiras de Inox</li>
+                    <li>1 unidade de Balança Semi-analítica</li>
+                    <li>10 unidades de Pipetas graduadas</li>
+                    <li>1 unidade de Datashow</li>
+                    <li>100 unidades de Tubos de ensaio</li>
+                    <li>5 unidades de Pipetas automáticas (100–1000 μL)</li>
+                    <li>5 unidades de Pipetas automáticas (10–100 μL)</li>
+                    <li>1 unidade de Agitador magnético ou vórtex</li>
+                    <li>10 unidades de Suporte para tubos de ensaio</li>
+                    <li>10 unidades de Buretas graduadas</li>
+                    <li>1 unidade de Quadro branco</li>
+                    <li>1 unidade de Modelo sintético do sistema respiratório</li>
+                    <li>1 unidade de Modelo sintético do sistema cardiovascular</li>
+                    <li>1 unidade de Modelo sintético do sistema digestório</li>
+                    <li>1 unidade de Modelo sintético do sistema urinário</li>
+                    <li>10 unidades de Erlenmeyers (250 mL)</li>
+                    <li>10 unidades de Suportes para bureta</li>
+                    <li>5 unidades de Bico de Bunsen</li>
+                    <li>6 unidades de Frascos de vidro com tampa</li>
+                    <li>1 unidade de Capela de ventilação</li>
+                    <li>20 unidades de Béqueres</li>
+                    <li>10 unidades de Pipetadores</li>
+                    <li>5 unidades de Termômetros</li>
+                    <li>1 unidade de Banho-maria</li>
+                    <li>5 unidades de Cronômetros</li>
+                    <li>10 unidades de Suportes para tubos de ensaio</li>
+                    <li>10 unidades de Bastões de vidro</li>
+                    <li>10 unidades de Proveta de 10 mL</li>
+                    <li>5 unidades de Microscópios ópticos</li>
+                    <li>1 unidade de Glicosímetro</li>
+                    <li>2 unidades de Proveta de 50 mL</li>
+                    <li>10 unidades de Estetoscópios clínicos</li>
+                    <li>1 unidade de Caixa de som portátil</li>
+                    <li>10 unidades de Fones de ouvido</li>
+                    <li>10 unidades de Calculadoras científicas</li>
+                    <li>1 unidade de Lâminas histológicas (tecidos epitelial, conjuntivo, muscular, nervoso)</li>
+                    <li>5 unidades de Recipientes para descarte de resíduos perfurocortantes</li>
+                    <li>5 unidades de Funil</li>
+                    <li>5 unidades de Copos medidores</li>
+                    <li>10 unidades de colheres</li>
+                    <li>10 unidades de Pinças</li>
+                    <li>5 unidades de Cubas de coloração</li>
+                    <li>1 unidade de Estufa</li>
+                    <li>200 unidades de Pipetas pauster</li>
+                    <li>20 unidades de Cálice de sedimentação (fundo cônico)</li>
+                    <li>10 unidades de Paquímetros</li>
+                    <li>1 unidade de Centrífuga</li>
+                    <li>5 unidades de Câmara de neubauer</li>
+                    <li>5 unidades de Esfigmomanômetro</li>
+                    <li>5 unidades de Recipiente para descarte de resíduos químicos</li>
+                    <li>10 unidades de Bandejas</li>
+                </ol>
+            </details>
+
+            <p class="attention-note"><strong>Atenção:</strong> Não serão aceitos espaços de cozinha, espaços com cortinas, sofás ou com outros materiais que possam levar ao risco de contaminação cruzada. As fotos precisam demonstrar um espaço apto para receber 10 alunos (no mínimo) e atender todos os requisitos acima citados.</p>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="Ciente_Infraestrutura" name="Ciente Infraestrutura" value="Sim" required>
+                Estou ciente de que a infraestrutura mínima para a realização das aulas práticas do curso de Biomedicina compreende os itens listados acima.
+                <span class="checkmark"></span>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pós-Envio e Confirmação</legend>
+            <p>Após o preenchimento do formulário, o comprovante de preenchimento deverá ser encaminhado para o e-mail <strong>juliana.sanchez@fecaf.com.br</strong>. O prazo para liberação do polo é de 10 dias úteis.</p>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="Ciente_Comprovante_Email_Juliana" name="Ciente Comprovante Email Juliana" value="Sim" required>
+                Estou ciente de que o comprovante deve ser enviado para Juliana Sanchez.
+                <span class="checkmark"></span>
+            </label>
+
+            <p>Para finalização deste processo, devo encaminhar um print da confirmação do envio do formulário para <strong>cristiane.andrade@fecaf.com.br</strong> informando sobre o preenchimento do formulário. O prazo para nossa devolutiva é 10 dias úteis.</p>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="Ciente_Confirmacao_Email_Cristiane" name="Ciente Confirmacao Email Cristiane" value="Sim" required>
+                Estou ciente de que devo encaminhar o print da confirmação para Cristiane Andrade.
+                <span class="checkmark"></span>
+            </label>
+        </fieldset>
+
+        <button type="submit">Enviar Cadastro do Polo</button>
     </form>
 
     <div id="feedbackMessage"></div>
