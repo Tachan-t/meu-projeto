@@ -93,6 +93,16 @@
         </div>
 
         <fieldset>
+            <legend>Seleção de Polo</legend>
+            <label for="selecionarPolo">Selecione o Polo:</label>
+            <select id="selecionarPolo" name="Polo Selecionado" required>
+                <option value="">Carregando polos...</option>
+            </select>
+            <p id="carregandoPolos" style="color: #0056b3; font-weight: bold; margin-top: 10px;">Carregando dados dos polos, por favor aguarde...</p>
+            <p id="erroCarregamentoPolos" style="color: #d9534f; font-weight: bold; margin-top: 10px; display: none;">Erro ao carregar polos. Por favor, tente novamente mais tarde.</p>
+        </fieldset>
+
+        <fieldset>
             <legend>Informações de Contato</legend>
 
             <label for="Email">Email (Polo):</label>
